@@ -1,0 +1,42 @@
+
+.sidebar-container{
+        transform: scale(0, 1);
+        transform-origin: left;
+        transition: $trans;
+        position: absolute;
+        top:0;
+        left:0;
+        width: 70vw;
+        height: 100vh;
+        background-color: $clr-light-1;
+        padding: 5vw;
+        z-index: 999;
+        .close-nav-btn{
+            margin-left: 5vw;
+        }
+        .nav-list{
+            gap: 0;
+            .nav-item{
+                margin-block: 0;
+                padding: 1em 0 1em 1em;
+                &:hover{
+                    background-color: $clr-pale-2;
+                }
+                &::after{
+                    display: none;
+                }
+            }
+            
+        }
+        &.active{
+            transform: scale(1, 1);
+        }
+        &::after{
+            position: absolute;
+            content: "";
+            width: 30vw;
+            height: 100%;
+            background-color: $lightbox-6;
+            top:0;
+            right:-30vw;
+        }}
